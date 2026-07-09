@@ -1,0 +1,20 @@
+# mount point   fstype    device                         device2                      flags
+/metadata       ext4      /dev/block/by-name/metadata   
+/data           f2fs      /dev/block/by-name/userdata    flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption
+/boot           emmc      /dev/block/by-name/boot        flags=slotselect
+/vendor_boot    emmc      /dev/block/by-name/vendor_boot flags=slotselect
+/dtbo           emmc      /dev/block/by-name/dtbo        flags=slotselect
+/vbmeta         emmc      /dev/block/by-name/vbmeta      flags=slotselect
+/persist        ext4      /dev/block/by-name/persist    
+/misc           emmc      /dev/block/by-name/misc       
+
+# Logical dynamic partitions
+/system         ext4      system                         flags=logical;,slotselect
+/vendor         ext4      vendor                         flags=logical;,slotselect
+/product        ext4      product                        flags=logical;,slotselect
+/vendor_dlkm    ext4      vendor_dlkm                    flags=logical;,slotselect
+/odm_dlkm       ext4      odm_dlkm                       flags=logical;,slotselect
+
+# Removable Storage
+/external_sd    vfat      /dev/block/mmcblk0p1           flags=display="Micro SD Card";storage;wipeingui;removable
+/usb_otg        vfat      /dev/block/sdd1                flags=display="USB OTG";storage;wipeingui;removable

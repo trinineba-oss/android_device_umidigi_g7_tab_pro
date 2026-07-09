@@ -1,0 +1,28 @@
+#
+# Copyright (C) 2026 The Android Open Source Project
+# Copyright (C) 2026 TeamWin Recovery Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+LOCAL_PATH := device/umidigi/g7_tab_pro
+
+# Key layout mappings for hardware buttons
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/gpio-keys.kl:$(TARGET_COPY_OUT_RECOVERY)/root/gpio-keys.kl
+
+# Shipping API level (Android 13 launch)
+PRODUCT_SHIPPING_API_LEVEL := 33
+
+# Virtual A/B support
+PRODUCT_VIRTUAL_AB_OTA := true
