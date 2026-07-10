@@ -16,4 +16,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_g7_tab_pro.mk
+    $(LOCAL_DIR)/omni_g7_tab_pro.mk \
+    $(LOCAL_DIR)/twrp_g7_tab_pro.mk
+
+COMMON_LUNCH_CHOICES := \
+    omni_g7_tab_pro-eng \
+    twrp_g7_tab_pro-eng
