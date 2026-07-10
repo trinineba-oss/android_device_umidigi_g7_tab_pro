@@ -15,6 +15,12 @@
 # limitations under the License.
 #
 
+# API Level / Security Patch (CRITICAL - must match BoardConfig.mk!)
+PRODUCT_SHIPPING_API_LEVEL := 33
+BOARD_SYSTEMSDK_VERSIONS := 33
+PLATFORM_VERSION := 16.1.0
+PLATFORM_SECURITY_PATCH := 2099-12-05
+
 # Inherit from core AOSP configurations
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
